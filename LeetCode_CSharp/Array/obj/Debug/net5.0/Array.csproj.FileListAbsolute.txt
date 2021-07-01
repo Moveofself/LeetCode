@@ -36,7 +36,6 @@ C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Array\bin\Debug\net5.0\Array
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Array\bin\Debug\net5.0\Array.dll
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Array\bin\Debug\net5.0\ref\Array.dll
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Array\bin\Debug\net5.0\Array.pdb
-C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Array\obj\Debug\net5.0\Array.csproj.AssemblyReference.cache
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Array\obj\Debug\net5.0\Array.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Array\obj\Debug\net5.0\Array.AssemblyInfoInputs.cache
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Array\obj\Debug\net5.0\Array.AssemblyInfo.cs
