@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "LeetCode_CSharp/1.0.0": {
+        "runtime": {
+          "LeetCode_CSharp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LeetCode_CSharp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
