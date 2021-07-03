@@ -1,0 +1,8 @@
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\TestCode\obj\Debug\TestCode.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\TestCode\bin\Debug\TestCode.exe.config
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\TestCode\bin\Debug\TestCode.exe
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\TestCode\bin\Debug\TestCode.pdb
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\TestCode\bin\Debug\Aspose.Cells.dll
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\TestCode\obj\Debug\TestCode.csproj.CopyComplete
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\TestCode\obj\Debug\TestCode.exe
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\TestCode\obj\Debug\TestCode.pdb

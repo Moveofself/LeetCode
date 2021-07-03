@@ -1,0 +1,17 @@
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\bin\Debug\netcoreapp3.0\Test.exe
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\bin\Debug\netcoreapp3.0\lib\Aspose.Cells.dll
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\bin\Debug\netcoreapp3.0\lib\License.lic
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\bin\Debug\netcoreapp3.0\Test.deps.json
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\bin\Debug\netcoreapp3.0\Test.runtimeconfig.json
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\bin\Debug\netcoreapp3.0\Test.runtimeconfig.dev.json
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\bin\Debug\netcoreapp3.0\Test.dll
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\bin\Debug\netcoreapp3.0\Test.pdb
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\bin\Debug\netcoreapp3.0\Aspose.Cells.dll
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.0\Test.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.0\Test.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.0\Test.AssemblyInfo.cs
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.0\Test.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.0\Test.csproj.CopyComplete
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.0\Test.dll
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.0\Test.pdb
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.0\Test.genruntimeconfig.cache

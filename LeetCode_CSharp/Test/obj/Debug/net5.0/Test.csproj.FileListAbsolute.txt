@@ -5,11 +5,15 @@ C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\bin\Debug\net5.0\Test.r
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\bin\Debug\net5.0\Test.dll
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\bin\Debug\net5.0\ref\Test.dll
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\bin\Debug\net5.0\Test.pdb
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\bin\Debug\net5.0\Aspose.Cells.dll
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\net5.0\Test.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\net5.0\Test.AssemblyInfoInputs.cache
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\net5.0\Test.AssemblyInfo.cs
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\net5.0\Test.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\net5.0\Test.csproj.CopyComplete
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\net5.0\Test.dll
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\net5.0\ref\Test.dll
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\net5.0\Test.pdb
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\net5.0\Test.genruntimeconfig.cache
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\bin\Debug\net5.0\lib\Aspose.Cells.dll
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\bin\Debug\net5.0\lib\License.lic

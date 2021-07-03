@@ -68,6 +68,7 @@ namespace Test
                     ChooseBlueBall = 1,
                     RedBall = new string[6],
                     BlueBall = new string[1],
+                    TotalBall = new string[7],
                     Level1 = 0,
                     Level2 = 0,
                     Level3 = 0,
@@ -85,6 +86,7 @@ namespace Test
                 do
                 {
                     BallNumber.MainProcess(ref Ball, TargetRed, TargetBlue);
+                    Function.WriteToExcel("111", Ball.TotalBall);
                 } while (DateTime.Compare(dt1, dt2) > 0);
 
                 //while (BallNumber.MainProcess(ref Ball, TargetRed, TargetBlue) != 1)
@@ -338,6 +340,7 @@ namespace Test
         public int ChooseBlueBall;
         public string[] RedBall;
         public string[] BlueBall;
+        public string[] TotalBall;
         public int Level1;
         public int Level2;
         public int Level3;
@@ -524,6 +527,9 @@ namespace Test
                 if (j != Blue.Length - 1)
                     tempB += " ";
             }
+
+            Red.CopyTo(Ball.TotalBall, 0);
+            Blue.CopyTo(Ball.TotalBall, Red.Length);
 
             if (Level > 0)
             {
