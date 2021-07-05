@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading;
@@ -10,6 +11,7 @@ namespace TestCode
     {
         static void Main(string[] args)
         {
+
             bool Run = true;
             while (Run)
             {
@@ -69,7 +71,7 @@ namespace TestCode
 
                 DateTime dt2 = DateTime.Now;
 
-                for (int j = 0; j < 10; j++)
+                for (int j = 0; j < 20; j++)
                 {
                     CaiPiao Ball = new CaiPiao
                     {
@@ -454,6 +456,45 @@ namespace TestCode
             Ball.BlueBall = GenerateBallNumber(Ball.ChooseBlueBall, Ball.TotalBlueBall);
             int Level = CompareArray(ref Ball, TargetRed, TargetBlue);
             PrintInfo(Ball, Level);
+
+
+            string sSql = string.Empty;
+            string sWhere = string.Empty;
+            sSql = " SELECT TOTALCOUNT FROM BALLCOUNT WHERE ";
+            sWhere = " REDBALL1 ='" + Ball.TotalBall[0] + "' AND REDBALL2 ='" + Ball.TotalBall[1] + "' AND REDBALL3 ='" + Ball.TotalBall[2] + "' AND";
+            sWhere +=   " REDBALL4 ='" + Ball.TotalBall[3] + "' AND REDBALL5 ='" + Ball.TotalBall[4] + "' AND REDBALL6 ='" + Ball.TotalBall[5] + "' AND";
+            sWhere += " BLUEBALL ='" + Ball.TotalBall[6] + "'";
+            sSql += sWhere;
+
+            DataTable dt = OracleHelper.ExecuteDataTable(sSql);
+            if (dt.Rows.Count>0)
+            {
+                int iCount=int.Parse( dt.Rows[0][0].ToString());
+                sSql = string.Empty;
+                sSql = " UPDATE BALLCOUNT SET TOTALCOUNT = '" + (iCount+1) + "' WHERE "+ sWhere;
+                OracleHelper.ExecuteNonQuery(sSql);
+            }
+            else
+            {
+                sSql = string.Empty;
+                sSql= " INSERT INTO BALLCOUNT VALUES ( '" + Ball.TotalBall[0] + "', '" + Ball.TotalBall[1] + "', '" + Ball.TotalBall[2] + "',";
+                sSql += " '" + Ball.TotalBall[3] + "', '" + Ball.TotalBall[4] + "', '" + Ball.TotalBall[5] + "',";
+                sSql += " '" + Ball.TotalBall[6] + "', 1 )";
+                OracleHelper.ExecuteNonQuery(sSql);
+            }
+
+            if (Level==1)
+            {
+                sSql = string.Empty;
+                sSql = " INSERT INTO BALLSUMMARY VALUES ( '" + Ball.TotalBall[0] + "', '" + Ball.TotalBall[1] + "', '" + Ball.TotalBall[2] + "',";
+                sSql += " '" + Ball.TotalBall[3] + "', '" + Ball.TotalBall[4] + "', '" + Ball.TotalBall[5] + "',";
+                sSql += " '" + Ball.TotalBall[6] + "', '"+ Ball.TotalCount +"' )";
+
+                OracleHelper.ExecuteNonQuery(sSql);
+
+            }
+
+
             return Level;
 
         }
@@ -573,6 +614,7 @@ namespace TestCode
         {
             string[] Red = Ball.RedBall;
             string[] Blue = Ball.BlueBall;
+
             //排序(由小到大排序)
             for (int m = 0; m < Red.Length; m++)
             {
@@ -635,6 +677,10 @@ namespace TestCode
 
 
         }
+
+
+        
+
 
 
         /// <summary>

@@ -1,26 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\LeetCode\\LeetCode_CSharp\\Array\\Array.csproj": {}
+    "C:\\GitHub\\LeetCode\\LeetCode_CSharp\\Array\\Array.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\LeetCode\\LeetCode_CSharp\\Array\\Array.csproj": {
+    "C:\\GitHub\\LeetCode\\LeetCode_CSharp\\Array\\Array.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\LeetCode\\LeetCode_CSharp\\Array\\Array.csproj",
+        "projectUniqueName": "C:\\GitHub\\LeetCode\\LeetCode_CSharp\\Array\\Array.csproj",
         "projectName": "Array",
-        "projectPath": "C:\\Users\\user\\source\\repos\\LeetCode\\LeetCode_CSharp\\Array\\Array.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\LeetCode\\LeetCode_CSharp\\Array\\obj\\",
+        "projectPath": "C:\\GitHub\\LeetCode\\LeetCode_CSharp\\Array\\Array.csproj",
+        "packagesPath": "C:\\Users\\AlienWare\\.nuget\\packages\\",
+        "outputPath": "C:\\GitHub\\LeetCode\\LeetCode_CSharp\\Array\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "D:\\VisualStudio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\AlienWare\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

@@ -6,3 +6,13 @@ C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\TestCode\bin\Debug\Aspose.Ce
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\TestCode\obj\Debug\TestCode.csproj.CopyComplete
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\TestCode\obj\Debug\TestCode.exe
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\TestCode\obj\Debug\TestCode.pdb
+C:\GitHub\LeetCode\LeetCode_CSharp\TestCode\bin\Debug\TestCode.exe.config
+C:\GitHub\LeetCode\LeetCode_CSharp\TestCode\bin\Debug\TestCode.exe
+C:\GitHub\LeetCode\LeetCode_CSharp\TestCode\bin\Debug\TestCode.pdb
+C:\GitHub\LeetCode\LeetCode_CSharp\TestCode\bin\Debug\Aspose.Cells.dll
+C:\GitHub\LeetCode\LeetCode_CSharp\TestCode\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\GitHub\LeetCode\LeetCode_CSharp\TestCode\obj\Debug\TestCode.csproj.AssemblyReference.cache
+C:\GitHub\LeetCode\LeetCode_CSharp\TestCode\obj\Debug\TestCode.csproj.CoreCompileInputs.cache
+C:\GitHub\LeetCode\LeetCode_CSharp\TestCode\obj\Debug\TestCode.csproj.CopyComplete
+C:\GitHub\LeetCode\LeetCode_CSharp\TestCode\obj\Debug\TestCode.exe
+C:\GitHub\LeetCode\LeetCode_CSharp\TestCode\obj\Debug\TestCode.pdb

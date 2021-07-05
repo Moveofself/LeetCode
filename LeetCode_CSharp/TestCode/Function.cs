@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Aspose.Cells;
+using Oracle.ManagedDataAccess.Client;
 
 namespace TestCode
 {
@@ -132,5 +134,48 @@ namespace TestCode
             }
             return true;
         }
+
+
+
+    }
+
+    public class OracleHelper
+    {
+        private static string connStr = "User Id=C##Ming;Password=Ming;Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=admin)))";
+
+        #region 执行SQL语句,返回受影响行数
+        public static int ExecuteNonQuery(string sql, params OracleParameter[] parameters)
+        {
+            using (OracleConnection conn = new OracleConnection(connStr))
+            {
+                conn.Open();
+                using (OracleCommand cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = sql;
+                    cmd.Parameters.AddRange(parameters);
+                    return cmd.ExecuteNonQuery();
+                }
+            }
+        }
+        #endregion
+        #region 执行SQL语句,返回DataTable;只用来执行查询结果比较少的情况
+        public static DataTable ExecuteDataTable(string sql, params OracleParameter[] parameters)
+        {
+            using (OracleConnection conn = new OracleConnection(connStr))
+            {
+                conn.Open();
+                using (OracleCommand cmd = conn.CreateCommand())
+                {
+                    cmd.CommandText = sql;
+                    cmd.Parameters.AddRange(parameters);
+
+                    OracleDataAdapter adapter = new OracleDataAdapter(cmd);
+                    DataTable datatable = new DataTable();
+                    adapter.Fill(datatable);
+                    return datatable;
+                }
+            }
+        }
+        #endregion
     }
 }
