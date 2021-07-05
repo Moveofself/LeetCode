@@ -33,7 +33,7 @@ namespace Arrays
                 int[] a = new int[] { 2, 7, 11, 15 };
 
                 Console.Write("请输入：");
-                int m = 0;
+
                 var input = Console.ReadLine();
 
                 if (string.IsNullOrEmpty(input))

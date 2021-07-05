@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 
-namespace Test
+namespace TestCode
 {
 
     class Program
@@ -15,7 +16,7 @@ namespace Test
                 int[] a = new int[] { 2, 7, 11, 15 };
 
                 Console.Write("请输入：");
-                int m = 0;
+
                 var input = Console.ReadLine();
 
                 if (string.IsNullOrEmpty(input))
@@ -52,54 +53,143 @@ namespace Test
 
 
                 string[] TargetRed = { "01", "06", "18", "22", "24", "25" };
+                string[] TargetRed1 = { "04", "05", "09", "14", "25", "27" };
                 string[] TargetBlue = { "08" };
+                string[] TargetBlue1 = { "07" };
                 double i = 0;
                 //while (!CompareArray(Final,GetNumber(1)))
                 //{
                 //    i++;
                 //}
 
-                CaiPiao Ball = new CaiPiao
-                {
-                    title = "",
-                    TotalRedBall = 33,
-                    ChooseRedBall = 6,
-                    TotalBlueBall = 16,
-                    ChooseBlueBall = 1,
-                    RedBall = new string[6],
-                    BlueBall = new string[1],
-                    TotalBall = new string[7],
-                    Level1 = 0,
-                    Level2 = 0,
-                    Level3 = 0,
-                    Level4 = 0,
-                    Level5 = 0,
-                    Level6 = 0,
-                    TotalCount = 0
-                };
+
 
                 string st1 = "17:00";
                 DateTime dt1 = Convert.ToDateTime(st1);
 
                 DateTime dt2 = DateTime.Now;
 
-                do
+                for (int j = 0; j < 10; j++)
                 {
-                    BallNumber.MainProcess(ref Ball, TargetRed, TargetBlue);
-                    Function.WriteToExcel("111", Ball.TotalBall);
-                } while (Ball.Level1<1);
+                    CaiPiao Ball = new CaiPiao
+                    {
+                        title = "",
+                        TotalRedBall = 33,
+                        ChooseRedBall = 6,
+                        TotalBlueBall = 16,
+                        ChooseBlueBall = 1,
+                        RedBall = new string[6],
+                        BlueBall = new string[1],
+                        TotalBall = new string[7],
+                        Level1 = 0,
+                        Level2 = 0,
+                        Level3 = 0,
+                        Level4 = 0,
+                        Level5 = 0,
+                        Level6 = 0,
+                        TotalCount = 0
+                    };
+
+                    do
+                    {
+                        BallNumber.MainProcess(ref Ball, TargetRed, TargetBlue);
+
+                        //Function.WriteToExcel("111", Ball.TotalBall);
+                    } while (Ball.Level1 < 1);
+
+                    string tempR = string.Empty, tempB = string.Empty;
+                    for (int m = 0; m < Ball.RedBall.Length; m++)
+                    {
+                        tempR += Ball.RedBall[m];
+                        if (m != Ball.RedBall.Length - 1)
+                            tempR += " ";
+                    }
+
+
+                    for (int n = 0; n < Ball.BlueBall.Length; n++)
+                    {
+                        tempB += Ball.BlueBall[n];
+                        if (n != Ball.BlueBall.Length - 1)
+                            tempB += " ";
+                    }
+
+
+                    Log.WriteLog("第一期 " + tempR + ":" + tempB+" 总注数："+ Ball.TotalCount);
+                    Log.WriteLog("中1等奖共" + Ball.Level1.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level1) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+                    Log.WriteLog("中2等奖共" + Ball.Level2.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level2) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+                    Log.WriteLog("中3等奖共" + Ball.Level3.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level3) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+                    Log.WriteLog("中4等奖共" + Ball.Level4.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level4) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+                    Log.WriteLog("中5等奖共" + Ball.Level5.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level5) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+                    Log.WriteLog("中6等奖共" + Ball.Level6.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level6) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+
+                }
+
+
+                for (int j = 0; j < 10; j++)
+                {
+                    CaiPiao Ball = new CaiPiao
+                    {
+                        title = "",
+                        TotalRedBall = 33,
+                        ChooseRedBall = 6,
+                        TotalBlueBall = 16,
+                        ChooseBlueBall = 1,
+                        RedBall = new string[6],
+                        BlueBall = new string[1],
+                        TotalBall = new string[7],
+                        Level1 = 0,
+                        Level2 = 0,
+                        Level3 = 0,
+                        Level4 = 0,
+                        Level5 = 0,
+                        Level6 = 0,
+                        TotalCount = 0
+                    };
+
+                    do
+                    {
+                        BallNumber.MainProcess(ref Ball, TargetRed1, TargetBlue1);
+
+                        //Function.WriteToExcel("111", Ball.TotalBall);
+                    } while (Ball.Level1 < 1);
+
+                    string tempR = string.Empty, tempB = string.Empty;
+                    for (int m = 0; m < Ball.RedBall.Length; m++)
+                    {
+                        tempR += Ball.RedBall[m];
+                        if (m != Ball.RedBall.Length - 1)
+                            tempR += " ";
+                    }
+
+
+                    for (int n = 0; n < Ball.BlueBall.Length; n++)
+                    {
+                        tempB += Ball.BlueBall[n];
+                        if (n != Ball.BlueBall.Length - 1)
+                            tempB += " ";
+                    }
+
+                    Log.WriteLog("第二期 " + tempR + ":" + tempB + " 总注数：" + Ball.TotalCount);
+                    Log.WriteLog("中1等奖共" + Ball.Level1.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level1) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+                    Log.WriteLog("中2等奖共" + Ball.Level2.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level2) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+                    Log.WriteLog("中3等奖共" + Ball.Level3.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level3) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+                    Log.WriteLog("中4等奖共" + Ball.Level4.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level4) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+                    Log.WriteLog("中5等奖共" + Ball.Level5.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level5) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+                    Log.WriteLog("中6等奖共" + Ball.Level6.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level6) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+
+                }
 
                 //while (BallNumber.MainProcess(ref Ball, TargetRed, TargetBlue) != 1)
                 //{
 
                 //}
 
-                Console.WriteLine("中1等奖共" + Ball.Level1.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level1) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
-                Console.WriteLine("中2等奖共" + Ball.Level2.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level2) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
-                Console.WriteLine("中3等奖共" + Ball.Level3.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level3) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
-                Console.WriteLine("中4等奖共" + Ball.Level4.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level4) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
-                Console.WriteLine("中5等奖共" + Ball.Level5.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level5) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
-                Console.WriteLine("中6等奖共" + Ball.Level6.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level6) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+                //Console.WriteLine("中1等奖共" + Ball.Level1.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level1) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+                //Console.WriteLine("中2等奖共" + Ball.Level2.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level2) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+                //Console.WriteLine("中3等奖共" + Ball.Level3.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level3) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+                //Console.WriteLine("中4等奖共" + Ball.Level4.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level4) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+                //Console.WriteLine("中5等奖共" + Ball.Level5.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level5) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
+                //Console.WriteLine("中6等奖共" + Ball.Level6.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level6) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
 
 
                 //var output = 0;
@@ -362,7 +452,7 @@ namespace Test
 
             Ball.RedBall = GenerateBallNumber(Ball.ChooseRedBall, Ball.TotalRedBall);
             Ball.BlueBall = GenerateBallNumber(Ball.ChooseBlueBall, Ball.TotalBlueBall);
-            int Level = CompareArray( ref Ball, TargetRed, TargetBlue);
+            int Level = CompareArray(ref Ball, TargetRed, TargetBlue);
             PrintInfo(Ball, Level);
             return Level;
 
@@ -377,9 +467,12 @@ namespace Test
         /// <returns></returns>
         public static string[] GenerateBallNumber(int iCount = 6, int MAX = 33)
         {
+            byte[] buffer = Guid.NewGuid().ToByteArray(); 
+            int iSeed = BitConverter.ToInt32(buffer, 0); 
+
             bool bRun = true;
-            Random rd = new Random();
-            int temp = 0,i=0;
+            Random rd = new Random(iSeed);
+            int temp = 0, i = 0;
             int[] tempArr = new int[iCount];
             string s = string.Empty;
             do

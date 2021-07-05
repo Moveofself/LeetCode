@@ -14,3 +14,4 @@ C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.1
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.1\Test.dll
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.1\Test.pdb
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.1\Test.genruntimeconfig.cache
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.1\Test.csproj.AssemblyReference.cache

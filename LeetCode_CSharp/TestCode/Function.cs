@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Aspose.Cells;
 
-namespace Test
+namespace TestCode
 {
     class Function
     {
