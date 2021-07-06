@@ -14,7 +14,6 @@ C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.1
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.1\Test.dll
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.1\Test.pdb
 C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.1\Test.genruntimeconfig.cache
-C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Test\obj\Debug\netcoreapp3.1\Test.csproj.AssemblyReference.cache
 C:\GitHub\LeetCode\LeetCode_CSharp\Test\bin\Debug\netcoreapp3.1\Test.exe
 C:\GitHub\LeetCode\LeetCode_CSharp\Test\bin\Debug\netcoreapp3.1\lib\Aspose.Cells.dll
 C:\GitHub\LeetCode\LeetCode_CSharp\Test\bin\Debug\netcoreapp3.1\lib\License.lic

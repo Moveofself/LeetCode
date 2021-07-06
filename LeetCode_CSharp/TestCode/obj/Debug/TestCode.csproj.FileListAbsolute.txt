@@ -16,3 +16,5 @@ C:\GitHub\LeetCode\LeetCode_CSharp\TestCode\obj\Debug\TestCode.csproj.CoreCompil
 C:\GitHub\LeetCode\LeetCode_CSharp\TestCode\obj\Debug\TestCode.csproj.CopyComplete
 C:\GitHub\LeetCode\LeetCode_CSharp\TestCode\obj\Debug\TestCode.exe
 C:\GitHub\LeetCode\LeetCode_CSharp\TestCode\obj\Debug\TestCode.pdb
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\TestCode\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\TestCode\obj\Debug\TestCode.csproj.AssemblyReference.cache

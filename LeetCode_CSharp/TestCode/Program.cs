@@ -52,6 +52,23 @@ namespace TestCode
                 //    Console.Write(item + " ");
                 //}
                 //Console.WriteLine();
+                string[] Red = new string[6];
+                string[] Blue = new string[1];
+                string tempRed = string.Empty, tempBlue = string.Empty;
+                for (int m = 0; m < 5; m++)
+                {
+                    for (int n = 0; n < 21076; n++)
+                    {
+                        Thread.Sleep(5);
+                        Red = BallNumber.GenerateBallNumber(6, 33);
+                        Blue = BallNumber.GenerateBallNumber(1, 16);
+                    }
+
+                    Log.WriteLog("预测第 " + m + 1 + " 注，信息如下");
+
+                    BallNumber.PrintInfo(Red, Blue);
+                }
+
 
 
                 string[] TargetRed = { "01", "06", "18", "22", "24", "25" };
@@ -116,7 +133,7 @@ namespace TestCode
                     }
 
 
-                    Log.WriteLog("第一期 " + tempR + ":" + tempB+" 总注数："+ Ball.TotalCount);
+                    Log.WriteLog("第一期 " + tempR + ":" + tempB + " 总注数：" + Ball.TotalCount);
                     Log.WriteLog("中1等奖共" + Ball.Level1.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level1) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
                     Log.WriteLog("中2等奖共" + Ball.Level2.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level2) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
                     Log.WriteLog("中3等奖共" + Ball.Level3.ToString() + "注，概率为：" + (Convert.ToDecimal(Ball.Level3) / Convert.ToDecimal(Ball.TotalCount) * 100).ToString() + "%");
@@ -274,7 +291,7 @@ namespace TestCode
         /// <param name="iRedCout"></param>
         /// <param name="iBlueCout"></param>
         /// <returns></returns>
-        private static string[] GetNumber(int iCount = 10, int iRedCout = 6, int iBlueCout = 1)
+        private static string[] GetNumber(int iCount = 5, int iRedCout = 6, int iBlueCout = 1)
         {
             string[] strRed = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33" };
             string[] strBlue = { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16" };
@@ -458,46 +475,48 @@ namespace TestCode
             PrintInfo(Ball, Level);
 
 
-            string sSql = string.Empty;
-            string sWhere = string.Empty;
-            sSql = " SELECT TOTALCOUNT FROM BALLCOUNT WHERE ";
-            sWhere = " REDBALL1 ='" + Ball.TotalBall[0] + "' AND REDBALL2 ='" + Ball.TotalBall[1] + "' AND REDBALL3 ='" + Ball.TotalBall[2] + "' AND";
-            sWhere +=   " REDBALL4 ='" + Ball.TotalBall[3] + "' AND REDBALL5 ='" + Ball.TotalBall[4] + "' AND REDBALL6 ='" + Ball.TotalBall[5] + "' AND";
-            sWhere += " BLUEBALL ='" + Ball.TotalBall[6] + "'";
-            sSql += sWhere;
+            //string sSql = string.Empty;
+            //string sWhere = string.Empty;
+            //sSql = " SELECT TOTALCOUNT FROM BALLCOUNT WHERE ";
+            //sWhere = " REDBALL1 ='" + Ball.TotalBall[0] + "' AND REDBALL2 ='" + Ball.TotalBall[1] + "' AND REDBALL3 ='" + Ball.TotalBall[2] + "' AND";
+            //sWhere +=   " REDBALL4 ='" + Ball.TotalBall[3] + "' AND REDBALL5 ='" + Ball.TotalBall[4] + "' AND REDBALL6 ='" + Ball.TotalBall[5] + "' AND";
+            //sWhere += " BLUEBALL ='" + Ball.TotalBall[6] + "'";
+            //sSql += sWhere;
 
-            DataTable dt = OracleHelper.ExecuteDataTable(sSql);
-            if (dt.Rows.Count>0)
-            {
-                int iCount=int.Parse( dt.Rows[0][0].ToString());
-                sSql = string.Empty;
-                sSql = " UPDATE BALLCOUNT SET TOTALCOUNT = '" + (iCount+1) + "' WHERE "+ sWhere;
-                OracleHelper.ExecuteNonQuery(sSql);
-            }
-            else
-            {
-                sSql = string.Empty;
-                sSql= " INSERT INTO BALLCOUNT VALUES ( '" + Ball.TotalBall[0] + "', '" + Ball.TotalBall[1] + "', '" + Ball.TotalBall[2] + "',";
-                sSql += " '" + Ball.TotalBall[3] + "', '" + Ball.TotalBall[4] + "', '" + Ball.TotalBall[5] + "',";
-                sSql += " '" + Ball.TotalBall[6] + "', 1 )";
-                OracleHelper.ExecuteNonQuery(sSql);
-            }
+            //DataTable dt = OracleHelper.ExecuteDataTable(sSql);
+            //if (dt.Rows.Count>0)
+            //{
+            //    int iCount=int.Parse( dt.Rows[0][0].ToString());
+            //    sSql = string.Empty;
+            //    sSql = " UPDATE BALLCOUNT SET TOTALCOUNT = '" + (iCount+1) + "' WHERE "+ sWhere;
+            //    OracleHelper.ExecuteNonQuery(sSql);
+            //}
+            //else
+            //{
+            //    sSql = string.Empty;
+            //    sSql= " INSERT INTO BALLCOUNT VALUES ( '" + Ball.TotalBall[0] + "', '" + Ball.TotalBall[1] + "', '" + Ball.TotalBall[2] + "',";
+            //    sSql += " '" + Ball.TotalBall[3] + "', '" + Ball.TotalBall[4] + "', '" + Ball.TotalBall[5] + "',";
+            //    sSql += " '" + Ball.TotalBall[6] + "', 1 )";
+            //    OracleHelper.ExecuteNonQuery(sSql);
+            //}
 
-            if (Level==1)
-            {
-                sSql = string.Empty;
-                sSql = " INSERT INTO BALLSUMMARY VALUES ( '" + Ball.TotalBall[0] + "', '" + Ball.TotalBall[1] + "', '" + Ball.TotalBall[2] + "',";
-                sSql += " '" + Ball.TotalBall[3] + "', '" + Ball.TotalBall[4] + "', '" + Ball.TotalBall[5] + "',";
-                sSql += " '" + Ball.TotalBall[6] + "', '"+ Ball.TotalCount +"' )";
+            //if (Level==1)
+            //{
+            //    sSql = string.Empty;
+            //    sSql = " INSERT INTO BALLSUMMARY VALUES ( '" + Ball.TotalBall[0] + "', '" + Ball.TotalBall[1] + "', '" + Ball.TotalBall[2] + "',";
+            //    sSql += " '" + Ball.TotalBall[3] + "', '" + Ball.TotalBall[4] + "', '" + Ball.TotalBall[5] + "',";
+            //    sSql += " '" + Ball.TotalBall[6] + "', '"+ Ball.TotalCount +"' )";
 
-                OracleHelper.ExecuteNonQuery(sSql);
+            //    OracleHelper.ExecuteNonQuery(sSql);
 
-            }
+            //}
 
 
             return Level;
 
         }
+
+
 
 
         /// <summary>
@@ -508,8 +527,8 @@ namespace TestCode
         /// <returns></returns>
         public static string[] GenerateBallNumber(int iCount = 6, int MAX = 33)
         {
-            byte[] buffer = Guid.NewGuid().ToByteArray(); 
-            int iSeed = BitConverter.ToInt32(buffer, 0); 
+            byte[] buffer = Guid.NewGuid().ToByteArray();
+            int iSeed = BitConverter.ToInt32(buffer, 0);
 
             bool bRun = true;
             Random rd = new Random(iSeed);
@@ -679,7 +698,64 @@ namespace TestCode
         }
 
 
-        
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Ball"></param>
+        /// <param name="Level"></param>
+        public static void PrintInfo(string[] Red, string[] Blue)
+        {
+
+            //排序(由小到大排序)
+            for (int m = 0; m < Red.Length; m++)
+            {
+                string tempstr;
+                for (int mm = m + 1; mm < Red.Length; mm++)
+                {
+                    if (Convert.ToInt32(Red[m]) > Convert.ToInt32(Red[mm]))
+                    {
+                        tempstr = Red[m];
+                        Red[m] = Red[mm];
+                        Red[mm] = tempstr;
+                    }
+                }
+            }
+            for (int m = 0; m < Blue.Length; m++)
+            {
+                string tempstr;
+                for (int mm = m + 1; mm < Blue.Length; mm++)
+                {
+                    if (Convert.ToInt32(Blue[m]) > Convert.ToInt32(Blue[mm]))
+                    {
+                        tempstr = Blue[m];
+                        Blue[m] = Blue[mm];
+                        Blue[mm] = tempstr;
+                    }
+                }
+            }
+
+
+            //取数据
+            string tempR = "", tempB = "";
+            for (int j = 0; j < Red.Length; j++)
+            {
+                tempR += Red[j];
+                if (j != Red.Length - 1)
+                    tempR += " ";
+            }
+
+
+            for (int j = 0; j < Blue.Length; j++)
+            {
+                tempB += Blue[j];
+                if (j != Blue.Length - 1)
+                    tempB += " ";
+            }
+
+            Log.WriteLog(tempR + ":" + tempB);
+
+        }
 
 
 
