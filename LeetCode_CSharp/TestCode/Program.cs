@@ -55,19 +55,64 @@ namespace TestCode
                 string[] Red = new string[6];
                 string[] Blue = new string[1];
                 string tempRed = string.Empty, tempBlue = string.Empty;
+
+                int iCount = 21077 * (int.Parse(DateTime.Now.ToString("dd")) + 5) * (int.Parse(DateTime.Now.ToString("MM")));
+
+
                 for (int m = 0; m < 5; m++)
                 {
-                    for (int n = 0; n < 21076; n++)
+                    for (int n = 0; n < iCount; n++)
                     {
-                        Thread.Sleep(5);
                         Red = BallNumber.GenerateBallNumber(6, 33);
                         Blue = BallNumber.GenerateBallNumber(1, 16);
+
+                        Console.Write("第" + (m + 1) + "注，第" + (n + 1) + "次结果！");
+                        BallNumber.PrintInfo(Red, Blue);
                     }
 
-                    Log.WriteLog("预测第 " + m + 1 + " 注，信息如下");
+                    //for (int n = 0; n < int.Parse(DateTime.Now.ToString("yyyyMMdd")); n++)
+                    //{
+                    //    Red = BallNumber.GenerateBallNumber(6, 33);
+                    //    Blue = BallNumber.GenerateBallNumber(1, 16);
 
-                    BallNumber.PrintInfo(Red, Blue);
+                    //    Console.WriteLine("第" + (m + 1) + "注，第" + (n + 1) + "次结果！");
+                    //}                    
+
+                    Log.WriteLog("预测第 " + (m + 1) + " 注，信息如下");
+
+                    BallNumber.LogInfo(Red, Blue);
                 }
+
+
+                //for (int n = 0; n < iCount; n++)
+                //{
+                //    for (int m = 0; m < 5; m++)
+                //    {
+                //        Red = BallNumber.GenerateBallNumber(6, 33);
+                //        Blue = BallNumber.GenerateBallNumber(1, 16);
+
+                //        Console.Write("第" + (n + 1) + "次结果！");
+                //        BallNumber.PrintInfo(Red, Blue);
+
+                //        if (n == iCount-1)
+                //        {
+                //            Log.WriteLog("预测第 " + (m + 1) + " 注，信息如下");
+
+                //            BallNumber.LogInfo(Red, Blue);
+                //        }
+                //    }
+                //}
+
+                //for (int n = 0; n < int.Parse(DateTime.Now.ToString("yyyyMMdd")); n++)
+                //{
+                //    Red = BallNumber.GenerateBallNumber(6, 33);
+                //    Blue = BallNumber.GenerateBallNumber(1, 16);
+
+                //    Console.WriteLine("第" + (m + 1) + "注，第" + (n + 1) + "次结果！");
+                //}                    
+
+
+
 
 
 
@@ -753,9 +798,36 @@ namespace TestCode
                     tempB += " ";
             }
 
-            Log.WriteLog(tempR + ":" + tempB);
+            Console.WriteLine(tempR + "+" + tempB);
 
         }
+
+
+
+        public static void LogInfo(string[] Red, string[] Blue)
+        {
+
+            //取数据
+            string tempR = "", tempB = "";
+            for (int j = 0; j < Red.Length; j++)
+            {
+                tempR += Red[j];
+                if (j != Red.Length - 1)
+                    tempR += " ";
+            }
+
+
+            for (int j = 0; j < Blue.Length; j++)
+            {
+                tempB += Blue[j];
+                if (j != Blue.Length - 1)
+                    tempB += " ";
+            }
+
+            Log.WriteLog(tempR + "+" + tempB);
+
+        }
+
 
 
 
