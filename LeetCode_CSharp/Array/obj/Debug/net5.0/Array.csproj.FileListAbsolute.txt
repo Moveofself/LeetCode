@@ -60,3 +60,4 @@ C:\GitHub\LeetCode\LeetCode_CSharp\Array\obj\Debug\net5.0\Array.dll
 C:\GitHub\LeetCode\LeetCode_CSharp\Array\obj\Debug\net5.0\ref\Array.dll
 C:\GitHub\LeetCode\LeetCode_CSharp\Array\obj\Debug\net5.0\Array.pdb
 C:\GitHub\LeetCode\LeetCode_CSharp\Array\obj\Debug\net5.0\Array.genruntimeconfig.cache
+C:\Users\user\source\repos\LeetCode\LeetCode_CSharp\Array\obj\Debug\net5.0\Array.csproj.AssemblyReference.cache
